@@ -1,15 +1,19 @@
-// skel-baseline v3.0.0-dev | (c) n33 | skel.io | MIT licensed
-
 @import '../libs/vars';
 @import '../libs/functions';
 @import '../libs/mixins';
+
+///
+/// Identity by HTML5 UP
+/// html5up.net | @n33co
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
 
 /* Icon */
 
 	.icon {
 		@include icon;
-		border-bottom: none;
 		position: relative;
+		border-bottom: none;
 
 		> .label {
 			display: none;
