@@ -2684,7 +2684,11 @@
 			line-height: 44px;
 			padding: 0.5em 0 0.25em 0;
 		}
-
+			
+			#header ul.top_menu li {
+				border: 0;
+			}
+			
 			#header ul.top_menu li.logo a {
 					position: relative;
 					top: -0.5em;
@@ -2718,7 +2722,7 @@
 		#header ul.top_menu li {
 			position: absolute;
 			top: 0;
-			right: 0;
+			right: 50px;
 			border: 0;
 		}
 		
@@ -2727,12 +2731,12 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			padding-top: 1em;
+			padding-top: 1.5em;
 		}
 		
 		#header ul.top_menu li.logo h1{
 			display: inline;
-			font-size: 2em;
+			font-size: 1.5em;
 		}
 	}
 
