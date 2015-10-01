@@ -2702,7 +2702,7 @@
 	@media screen and (max-width: 770px) {
 		#header.alt {
 			background: #fff;
-			color: #111;
+			color: #000;
 			cursor: default;
 			height: 3.25em;
 			left: 0;
@@ -2712,6 +2712,7 @@
 			top: 0;
 			width: 100%;
 			z-index: 10001;
+			box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
 		}
 		
 		#header ul.top_menu li {
@@ -2724,7 +2725,7 @@
 		#header ul.top_menu li.logo {
 			position: absolute;
 			top: 0;
-			right: 0;
+			left: 0;
 			width: 100%;
 			padding-top: 1em;
 		}

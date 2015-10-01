@@ -33,6 +33,17 @@
 			containers: true,
 			conditionals: true
 		});
+		
+		skel.viewport({
+			breakpoints: {
+				medium: {
+					width: "device-width"
+				},
+				small: {
+					scalable: false
+				}
+			}
+		});
 
 	// Disable animations/transitions until everything's loaded.
 		$body.classList.add('is-loading');
