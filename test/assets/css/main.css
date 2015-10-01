@@ -2681,7 +2681,6 @@
 	@media screen and (max-width: 980px) {
 
 		#header {
-			/* height: 44px; */
 			line-height: 44px;
 			padding: 0.5em 0 0.25em 0;
 		}
@@ -2713,6 +2712,26 @@
 			top: 0;
 			width: 100%;
 			z-index: 10001;
+		}
+		
+		#header ul.top_menu li {
+			position: absolute;
+			top: 0;
+			right: 0;
+			border: 0;
+		}
+		
+		#header ul.top_menu li.logo {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			padding-top: 1em;
+		}
+		
+		#header ul.top_menu li.logo h1{
+			display: inline;
+			font-size: 2em;
 		}
 	}
 
