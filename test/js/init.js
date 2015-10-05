@@ -124,5 +124,28 @@
 					$nav.classList.remove('visible');
 
 				});
-				
-})();
+			
+		// Header.
+		// If the header is using "alt" styling and #banner is present, use scrollwatch
+		// to revert it back to normal styling once the user scrolls past the banner.
+		// Note: This is disabled on mobile devices.
+			if (!skel.vars.mobile
+			&&	!skel.breakpoint("small").active
+			&&	$header.hasClass('alt')
+			&&	$banner.length > 0) {
+
+				$window.on('load', function() {
+
+					$banner.scrollwatch({
+						delay:		0,
+						range:		1,
+						anchor:		'top',
+						on:			function() { $header.addClass('alt'); },
+						off:		function() { $header.removeClass('alt'); }
+					});
+
+				});
+
+			}
+			
+})(jQuery);

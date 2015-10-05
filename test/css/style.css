@@ -984,20 +984,6 @@
 		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
 	}
 	
-	#header.mobile {
-		background: #fff;
-		color: #111;
-		cursor: default;
-		height: 3.25em;
-		left: 0;
-		line-height: 3.25em;
-		position: fixed;
-		text-align: center;
-		top: 0;
-		width: 100%;
-		z-index: 10001;
-	}
-	
 	#header.reveal {
 			-moz-animation: reveal-header 0.5s;
 			-webkit-animation: reveal-header 0.5s;
@@ -1015,6 +1001,7 @@
 		box-shadow: none;
 		position: absolute;
 		background: transparent;
+		color: #fff;
 	}
 		
 		#header ul {
@@ -1033,7 +1020,7 @@
 					font-weight: 300;
 					display: inline;
 					vertical-align: top;
-					color: #000;
+					color: inherit;
 				}
 			
 		#header li > a {
@@ -1262,7 +1249,7 @@
 /* Banner */
 
 	#banner {
-		padding: 0 0 6em 0;
+		padding: 0;
 		background: #2b2b2b;
 		text-align: center;
 		height: 30em;
@@ -1280,30 +1267,10 @@
 			margin-bottom: 1.75em;
 		}
 
-		@media screen and (max-width: 1680px) {
-
-			#banner {
-				padding: 0 0 5em 0;
-			}
-
-		}
-
 		@media screen and (max-width: 1280px) {
 
-			#banner {
-				padding: 0 0 3em 0;
-			}
-
-				#banner h2 {
-					font-size: 3.5em;
-				}
-
-		}
-
-		@media screen and (max-width: 980px) {
-
-			#banner {
-				padding: 0 2em 4em 2em;
+			#banner h2 {
+				font-size: 3.5em;
 			}
 
 		}
@@ -1311,7 +1278,7 @@
 		@media screen and (max-width: 770px) {
 
 			#banner {
-				padding: 2em 2em 2em 2em;
+				padding-top: 3em;
 			}
 
 				#banner h2 {
@@ -1327,10 +1294,15 @@
 		@media screen and (max-width: 480px) {
 
 			#banner {
-				padding: 2em 2em 2em 2em;
+				padding-top: 3em;
 			}
 
 		}
+		
+			#banner .inner {
+				padding: 1em;
+				text-align: center;
+			}
 	
 	.slide-image {
 		position: absolute;
