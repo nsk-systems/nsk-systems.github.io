@@ -1030,6 +1030,7 @@
 				#header ul li > h1{
 					margin: 0;
 					font-family: 'EB Garamond', serif;
+					font-weight: 300;
 					display: inline;
 					vertical-align: top;
 					color: #000;
@@ -1117,8 +1118,12 @@
 			z-index: 10001;
 		}
 		
+		#header ul li {
+			font-size:1.25em
+		}
+		
 		#header ul li > h1{
-			font-size:2.25em
+			font-size:1.5em
 		}
 		
 	}
