@@ -29,7 +29,7 @@
 		skel.layout({
 			reset: "normalize",
 			grid: true,
-			containers: true,
+			containers: '100%',
 			conditionals: true
 		});
 		
@@ -38,6 +38,7 @@
 			scalable: true,
 			breakpoints: {
 				medium: {
+					containers: "90%",
 					width: "device-width"
 				},
 				small: {
@@ -60,6 +61,12 @@
 			  loop: true,
 			  nav: false
 			  
+		  });
+		});
+		
+		$(document).ready(function(){
+		  $('.slick-slider').slick({
+			dots: true
 		  });
 		});
 	
