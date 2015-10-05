@@ -32,6 +32,19 @@
 			containers: true,
 			conditionals: true
 		});
+		
+		skel.viewport({
+			width: "device-width",
+			scalable: true,
+			breakpoints: {
+				medium: {
+					width: "device-width"
+				},
+				small: {
+					scalable: false
+				}
+			}
+		});
 
 	// Disable animations/transitions until everything's loaded.
 		$body.classList.add('is-loading');
