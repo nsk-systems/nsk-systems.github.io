@@ -39,7 +39,15 @@
 			
 			skel.layout({
 				reset: "full",
+				conditionals: true,
 				grid: true
+			});
+			
+			$(document).ready(function(){
+			  $(".owl-carousel").owlCarousel({
+				  items: 1,
+				  loop: true
+			  });
 			});
 		
 		// Mobile?
