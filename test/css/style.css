@@ -1013,8 +1013,8 @@
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
-		color: #ffffff;
+		background: #fff;/* #21b2a6; */
+		color: #000;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -1063,7 +1063,7 @@
 					}
 
 		#menu .close {
-			background-image: url("images/close.svg");
+			background-image: url("images/close_blk.svg");
 			background-position: 1.85em 1em;
 			background-repeat: no-repeat;
 			border: 0;
@@ -1223,6 +1223,10 @@
 									#header nav > ul > li > a.menuToggle span {
 										display: none;
 									}
+									
+								#header a.phone {
+									right: 4em;
+								}	
 
 							}
 
@@ -1424,6 +1428,9 @@
 		width: 100%;
 		z-index: -1;
 		opacity: 0.5;
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: cover;
 	}
 		
 	body.is-loading #banner h2 {
@@ -1453,3 +1460,7 @@
 	body.landing #page-wrapper {
 		padding-top: 0;
 	}
+	
+	/* body.is-mobile.landing #page-wrapper {
+		padding-top: 3em;
+	} */
