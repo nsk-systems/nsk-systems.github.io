@@ -1149,7 +1149,7 @@
 				height: 2px;
 				background-color: orange;
 				position: absolute;
-				bottom: 14px;
+				bottom: 10px;
 				left: 10%;
 			}
 
@@ -1241,6 +1241,9 @@
 		#header.alt {
 			background: transparent;
 			color: #fff;
+			position: absolute;
+			top: 0;
+			right: 0;
 		}
 
 			/* #header.alt h1 {
@@ -1262,7 +1265,6 @@
 		-ms-justify-content: center;
 		justify-content: center;
 		cursor: default;
-		height: 100vh;
 		min-height: 35em;
 		overflow: hidden;
 		position: relative;
