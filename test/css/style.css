@@ -121,14 +121,14 @@
 		}
 
 	h3 {
-		font-size: 1.15em;
+		font-size: 1.75em;
 		line-height: 1.75em;
 	}
 
 		@media screen and (max-width: 736px) {
 
 			h3 {
-				font-size: 1em;
+				font-size: 1.5em;
 				line-height: 1.65em;
 			}
 
@@ -221,13 +221,13 @@
 	}
 
 	header p {
-		/* color: rgba(255, 255, 255, 0.5); */
 		position: relative;
 		top: -0.25em;
 	}
 
 	header h3 + p {
-		font-size: 1.1em;
+		font-size: 0.9em;
+		font-style: italic;
 	}
 
 	header h4 + p,
@@ -1485,13 +1485,27 @@
 		border: 0;
 		background: #fff;
 		opacity: 1;
-		min-height: 500px;
+		height: 25em;
 	}
 	
 		.copperi-link:hover{
 			opacity: 0.7;
 		}
+
+	@media screen and (max-width: 980px) {
 		
+		.copperi-link {
+			height: 20em;
+		}
+	}
+	
+	@media screen and (max-width: 736px) {
+		
+		.copperi-link {
+			height: 15em;
+		}
+	}
+	
 	.front-content-wrapper {
 		border: solid 1px #eee;
 		border-right: 0;
@@ -1499,4 +1513,38 @@
 		width: 100%;
 		text-align: center;
 		vertical-align: middle;
+	}
+		
+		.front-content-wrapper h3{
+			margin: 0;
+		}
+	
+	.front-content-wrapper .item-coll{
+		display: table;
+		padding: 2em;
+		color: #fff;
+		height: 100%;
+		width: 100%;
+	}
+	
+	.front-content-wrapper .item-coll{
+	}
+	
+	.front-content-wrapper .item-misc{
+	}
+	
+	.front-content-wrapper .wrapper-inner{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	.image-wrapper {
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
 	}
