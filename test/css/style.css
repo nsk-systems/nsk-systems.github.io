@@ -129,7 +129,7 @@
 
 			h3 {
 				font-size: 1.5em;
-				line-height: 1.65em;
+				line-height: 1.5em;
 			}
 
 		}
@@ -949,6 +949,32 @@
 			.button.special:active {
 				background-color: #eb341c !important;
 			}
+		
+		input[type="submit"].special-blk,
+		input[type="reset"].special-blk,
+		input[type="button"].special-blk,
+		button.special-blk,
+		.button.special-blk{
+			background-color: #2b2b2b;
+			box-shadow: none !important;
+			color: #ffffff !important;
+		}
+
+			input[type="submit"].special-blk:hover,
+			input[type="reset"].special-blk:hover,
+			input[type="button"].special-blk:hover,
+			button.special-blk:hover,
+			.button.special-blk:hover {
+				background-color: #2c2c2c !important;
+			}
+
+			input[type="submit"].special-blk:active,
+			input[type="reset"].special-blk:active,
+			input[type="button"].special-blk:active,
+			button.special:active,
+			.button.special:active {
+				background-color: #2a2a2a !important;
+			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
 		input[type="reset"].disabled,
@@ -1301,6 +1327,7 @@
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+		color: #fff;
 	}
 
 		#banner h2 {
@@ -1457,7 +1484,7 @@
 		z-index: -1;
 		opacity: 0.5;
 		background-repeat: no-repeat;
-		background-position: top center;
+		background-position: center center;
 		background-size: cover;
 	}
 		
@@ -1503,7 +1530,7 @@
 		border: 0;
 		background: #fff;
 		opacity: 1;
-		height: 25em;
+		height: 30em;
 	}
 	
 		.copperi-link:hover{
@@ -1513,14 +1540,21 @@
 	@media screen and (max-width: 980px) {
 		
 		.copperi-link {
-			height: 20em;
+			height: 22em;
 		}
 	}
 	
 	@media screen and (max-width: 736px) {
 		
 		.copperi-link {
-			height: 15em;
+			height: 25em;
+		}
+	}
+	
+	@media screen and (max-width: 480px) {
+		
+		.copperi-link {
+			height: 20em;
 		}
 	}
 	
@@ -1538,10 +1572,24 @@
 	
 	.front-content-wrapper .item{
 		display: table;
-		padding: 2em;
+		padding: 1em;
 		height: 100%;
 		width: 100%;
 	}
+	
+		@media screen and (max-width: 980px) {
+			
+			.front-content-wrapper .item{
+				padding: 0.5em;
+			}
+		}
+		
+		@media screen and (max-width: 736px) {
+			
+			.front-content-wrapper .item{
+				padding: 0.25em;
+			}
+		}
 	
 	.front-content-wrapper .product {
 		color: #2b2b2b;
