@@ -1474,3 +1474,20 @@
 	/* body.is-mobile.landing #page-wrapper {
 		padding-top: 3em;
 	} */
+	
+	.copperi-link {
+		moz-transition: opacity 0.2s ease;
+		-webkit-transition: opacity 0.2s ease;
+		-ms-transition: opacity 0.2s ease;
+		transition: opacity 0.2s ease;
+		display: block;
+		height: 100%;
+		width: 100%;
+		border: 0;
+		background: #fff;
+		opacity: 1;
+	}
+	
+		.copperi-link:hover{
+			opacity: 0.7;
+		}
