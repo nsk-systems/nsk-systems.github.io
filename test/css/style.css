@@ -1111,11 +1111,22 @@
 	}
 
 /* Header */
+	@-moz-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
+	@-webkit-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
+	@-o-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
+	@-ms-keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
+	@keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
+
 	#header {
-		-moz-transition: background-color 0.2s ease;
+		/* -moz-transition: background-color 0.2s ease;
 		-webkit-transition: background-color 0.2s ease;
 		-ms-transition: background-color 0.2s ease;
-		transition: background-color 0.2s ease;
+		transition: background-color 0.2s ease; */
+		-moz-animation: reveal-header 0.5s;
+		-webkit-animation: reveal-header 0.5s;
+		-o-animation: reveal-header 0.5s;
+		-ms-animation: reveal-header 0.5s;
+		animation: reveal-header 0.5s;
 		background: #fff;/* #2e3842; */
 		height: 3em;
 		left: 0;
@@ -1125,6 +1136,7 @@
 		width: 100%;
 		z-index: 10000;
 		color: #000;
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
 	}
 
 		#header a.phone {
@@ -1253,11 +1265,17 @@
 					}
 
 		#header.alt {
+			-moz-animation: none;
+			-webkit-animation: none;
+			-o-animation: none;
+			-ms-animation: none;
+			animation: none;
 			background: transparent;
 			color: #fff;
 			position: absolute;
 			top: 0;
 			right: 0;
+			box-shadow: none;
 		}
 
 			/* #header.alt h1 {
@@ -1508,7 +1526,6 @@
 	
 	.front-content-wrapper {
 		border: solid 1px #eee;
-		border-right: 0;
 		height: 100%;
 		width: 100%;
 		text-align: center;
@@ -1519,18 +1536,27 @@
 			margin: 0;
 		}
 	
-	.front-content-wrapper .item-coll{
+	.front-content-wrapper .item{
 		display: table;
 		padding: 2em;
-		color: #fff;
 		height: 100%;
 		width: 100%;
 	}
 	
-	.front-content-wrapper .item-coll{
+	.front-content-wrapper .product {
+		color: #2b2b2b;
+	}
+		
+		.front-content-wrapper .product img{
+			margin: 0;
+		}
+	
+	.front-content-wrapper .coll{
+		color: #fff;
 	}
 	
-	.front-content-wrapper .item-misc{
+	.front-content-wrapper .misc{
+		color: #2b2b2b;
 	}
 	
 	.front-content-wrapper .wrapper-inner{
