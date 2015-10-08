@@ -6,15 +6,12 @@
 }
 
 /* Icons */
-@font-face
-{
-    font-family: 'slick';
-    font-weight: normal;
-    font-style: normal;
+@import url(font-awesome.min.css);
 
-    src: url('./fonts/slick.eot');
-    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+.slick-slide  {
+	outline: none;
 }
+
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -64,7 +61,7 @@
 .slick-prev:before,
 .slick-next:before
 {
-    font-family: 'slick';
+    font-family: FontAwesome;
     font-size: 20px;
     line-height: 1;
 
@@ -77,50 +74,50 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: 25px;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -25px;
+    right: 25px;
     left: auto;
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '\f104';
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: '\f105';
 }
 
 .slick-next
 {
-    right: -25px;
+    right: 25px;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -25px;
+    left: 25px;
 }
 .slick-next:before
 {
-    content: '→';
+    content: '\f105';
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: '\f104';
 }
 
 /* Dots */
-.slick-slider
+/* .slick-slider
 {
     margin-bottom: 30px;
-}
+} */
 
 .slick-dots
 {
     position: absolute;
-    bottom: -45px;
+    bottom: 0;
 
     display: block;
 
@@ -151,51 +148,32 @@
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     padding: 5px;
 
     cursor: pointer;
-
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     color: transparent;
     border: 0;
     outline: none;
-    background: transparent;
+    background: #fff;
+	box-shadow: none;
+	border-radius: 50%;
+	opacity: .4;
+	-webkit-transition: opacity .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
 }
 .slick-dots li button:hover,
 .slick-dots li button:focus
 {
     outline: none;
+	opacity: 1;
 }
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before
+
+.slick-dots li.slick-active button
 {
     opacity: 1;
-}
-.slick-dots li button:before
-{
-    font-family: 'slick';
-    font-size: 6px;
-    line-height: 20px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 20px;
-    height: 20px;
-
-    content: '•';
-    text-align: center;
-
-    opacity: .25;
-    color: black;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.slick-dots li.slick-active button:before
-{
-    opacity: .75;
-    color: black;
-}
+} 

@@ -44,23 +44,24 @@
 				grid: true
 			});
 			
-			$(document).ready(function(){
-			  $(".owl-carousel").owlCarousel({
-				  items: 1,
-				  loop: true,
-				  smartSpeed: 1000,
-				  fluidSpeed: false,
-				  pullDrag: false,
-				  touchDrag: true
-			  });
-			});
-			
 			// $(document).ready(function(){
-			  // $('.owl-carousel').slick({
-				// dots: true,
-				// arrows: false
+			  // $(".owl-carousel").owlCarousel({
+				  // items: 1,
+				  // loop: true,
+				  // smartSpeed: 1000,
+				  // fluidSpeed: false,
+				  // pullDrag: false,
+				  // touchDrag: true
 			  // });
 			// });
+			
+			$(document).ready(function(){
+			  $('.owl-carousel').slick({
+				dots: true,
+				arrows: false,
+				infinite: false
+			  });
+			});
 		
 		// Mobile?
 			if (skel.vars.mobile)
