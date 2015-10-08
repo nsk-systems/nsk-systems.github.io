@@ -44,10 +44,17 @@
 				grid: true
 			});
 			
+			// $(document).ready(function(){
+			  // $(".owl-carousel").owlCarousel({
+				  // items: 1,
+				  // loop: true
+			  // });
+			// });
+			
 			$(document).ready(function(){
-			  $(".owl-carousel").owlCarousel({
-				  items: 1,
-				  loop: true
+			  $('.owl-carousel').slick({
+				dots: true,
+				arrows: false
 			  });
 			});
 		
