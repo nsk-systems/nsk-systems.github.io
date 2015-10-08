@@ -44,19 +44,19 @@
 				grid: true
 			});
 			
-			// $(document).ready(function(){
-			  // $(".owl-carousel").owlCarousel({
-				  // items: 1,
-				  // loop: true
-			  // });
-			// });
-			
 			$(document).ready(function(){
-			  $('.owl-carousel').slick({
-				dots: true,
-				arrows: false
+			  $(".owl-carousel").owlCarousel({
+				  items: 1,
+				  loop: true
 			  });
 			});
+			
+			// $(document).ready(function(){
+			  // $('.owl-carousel').slick({
+				// dots: true,
+				// arrows: false
+			  // });
+			// });
 		
 		// Mobile?
 			if (skel.vars.mobile)
