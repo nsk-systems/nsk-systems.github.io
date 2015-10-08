@@ -59,7 +59,8 @@
 			  $('.owl-carousel').slick({
 				dots: true,
 				arrows: false,
-				infinite: false
+				infinite: false,
+				speed: 700
 			  });
 			});
 		

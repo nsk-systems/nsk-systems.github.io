@@ -1040,26 +1040,28 @@
 		}
 
 	#menu {
-		-moz-transform: translateX(20em);
-		-webkit-transform: translateX(20em);
-		-ms-transform: translateX(20em);
-		transform: translateX(20em);
+		-moz-transform: translateX(30em);
+		-webkit-transform: translateX(30em);
+		-ms-transform: translateX(30em);
+		transform: translateX(30em);
 		-moz-transition: -moz-transform 0.5s ease;
 		-webkit-transition: -webkit-transform 0.5s ease;
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
 		background: #fff;/* #21b2a6; */
-		color: #000;
+		color: #2b2b2b;
 		height: 100%;
-		max-width: 80%;
+		max-width: 85%;
 		overflow-y: auto;
 		padding: 3em 2em;
 		position: fixed;
 		right: 0;
 		top: 0;
-		width: 20em;
+		width: 30em;
 		z-index: 10002;
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
+		text-align: center;
 	}
 
 		#menu ul {
@@ -1310,10 +1312,10 @@
 /* Banner */
 
 	#banner {
-		display: -moz-flex;
+		/* display: -moz-flex;
 		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
+		display: -ms-flex; */
+		display: table;/* flex; */
 		-moz-flex-direction: column;
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
@@ -1383,6 +1385,11 @@
 				color: inherit;
 			}
 
+		#banner .inner {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
 		#banner .more {
 			-moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
 			-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
