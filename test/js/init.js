@@ -47,7 +47,11 @@
 			$(document).ready(function(){
 			  $(".owl-carousel").owlCarousel({
 				  items: 1,
-				  loop: true
+				  loop: true,
+				  smartSpeed: 1000,
+				  fluidSpeed: false,
+				  pullDrag: false,
+				  touchDrag: true
 			  });
 			});
 			
