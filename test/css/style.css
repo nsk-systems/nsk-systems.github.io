@@ -1036,6 +1036,11 @@
 				height: 3.75em;
 				line-height: 3.75em;
 			}
+			
+			.small {
+				padding: 0 0.6em;
+				
+			}
 
 		}
 
