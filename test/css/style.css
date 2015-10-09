@@ -975,6 +975,37 @@
 			.button.special:active {
 				background-color: #2a2a2a !important;
 			}
+		
+		input[type="submit"].special-wht,
+		input[type="reset"].special-wht,
+		input[type="button"].special-wht,
+		button.special-wht,
+		.button.special-wht{
+			background-color: rgba(255, 255, 255, 0.75);
+			box-shadow: none !important;
+			color: #2b2b2b !important;
+		}
+
+			input[type="submit"].special-wht:hover,
+			input[type="reset"].special-wht:hover,
+			input[type="button"].special-wht:hover,
+			button.special-wht:hover,
+			.button.special-wht:hover {
+				background-color: #fff !important;
+			}
+
+			input[type="submit"].special-wht:active,
+			input[type="reset"].special-wht:active,
+			input[type="button"].special-wht:active,
+			button.special-wht:active,
+			.button.special-wht:active {
+				outline: 0;
+				-webkit-transform: scale(.98);
+				-ms-transform: scale(.98);
+				-o-transform: scale(.98);
+				transform: scale(.98);
+				color: #fff;
+			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
 		input[type="reset"].disabled,
@@ -1095,7 +1126,7 @@
 					@media screen and (max-width: 736px) {
 
 						#menu ul > li > a {
-							line-height: 3em;
+							line-height: 1.25em;
 						}
 
 					}
@@ -1312,20 +1343,10 @@
 /* Banner */
 
 	#banner {
-		/* display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex; */
-		display: table;/* flex; */
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-justify-content: center;
-		-webkit-justify-content: center;
-		-ms-justify-content: center;
-		justify-content: center;
+		display: table;
 		cursor: default;
 		min-height: 35em;
+		height: 35em;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
@@ -1390,7 +1411,7 @@
 			vertical-align: middle;
 		}
 		
-		#banner .more {
+		/* #banner .more {
 			-moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
 			-webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
 			-ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
@@ -1458,15 +1479,14 @@
 			left: 0;
 			top: 0;
 			opacity: 0;
-		}
+		} */
 
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 7em 3em 5em 3em ;
-				min-height: 15em;
-				/* height: auto;
-				min-height: 0; */
+				padding: 4em 2em 2em 2em ;
+				min-height: 5em;
+				height: 5em;
 			}
 
 				#banner h2 {
