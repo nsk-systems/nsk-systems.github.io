@@ -1089,7 +1089,7 @@
 					letter-spacing: 0.225em;
 					outline: 0;
 					text-decoration: none;
-					text-transform: uppercase;
+					text-transform: none;
 				}
 
 					@media screen and (max-width: 736px) {
@@ -1602,8 +1602,30 @@
 		color: #2b2b2b;
 	}
 		
+		@-moz-keyframes pop-up { 0% { top: 5em; } 100% { top: 0; } }
+		@-webkit-keyframes pop-up { 0% { top: 5em; } 100% { top: 0; } }
+		@-o-keyframes pop-up { 0% { top: 5em; } 100% { top: 0; } }
+		@-ms-keyframes pop-up { 0% { top: 5em; } 100% { top: 0; } }
+		@keyframes pop-up { 0% { top: 5em; } 100% { top: 0; } }
+		
 		.front-content-wrapper .product img{
 			margin: 0;
+			-moz-animation-fill-mode: both;
+			-webkit-animation-fill-mode: both;
+			-o-animation-fill-mode: both;
+			-ms-animation:-fill-mode: both;
+			animation-fill-mode: both;
+			-moz-animation-delay: 0s;
+			-webkit-animation-delay: 0s;
+			-o-animation-delay: 0s;
+			-ms-animation:-delay: 0s;
+			animation-delay: 0s;
+			-moz-animation-duration: .7s;
+			-webkit-animation-duration: .7s;
+			-o-animation-duration: .7s;
+			-ms-animation-duration: .7s;
+			animation-duration: .7s;
+			top: 5em;
 		}
 	
 	.front-content-wrapper .coll{
@@ -1629,3 +1651,9 @@
 		background-position: center center;
 		background-size: cover;
 	}
+	
+	-moz-animation: reveal-header 0.5s;
+	-webkit-animation: reveal-header 0.5s;
+	-o-animation: reveal-header 0.5s;
+	-ms-animation: reveal-header 0.5s;
+	animation: reveal-header 0.5s;

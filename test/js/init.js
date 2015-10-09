@@ -63,6 +63,15 @@
 				speed: 700
 			  });
 			});
+			
+			$('.pop').scrollex({
+			  enter: function() {
+
+				// Set #foobar's background color to green when we scroll into it.
+				  $(this).css('animation-name', 'pop-up');
+
+			  }
+			});
 		
 		// Mobile?
 			if (skel.vars.mobile)
