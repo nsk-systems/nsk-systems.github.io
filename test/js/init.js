@@ -66,10 +66,11 @@
 			
 			$('.pop').scrollex({
 			  enter: function() {
-
-				// Set #foobar's background color to green when we scroll into it.
-				  $(this).css('animation-name', 'pop-up');
-
+				$(this).css('-moz-animation-name', 'pop-up');
+				$(this).css('-webkit-animation-name', 'pop-up');
+				$(this).css('-o-animation-name', 'pop-up');
+				$(this).css('-ms-animation-name', 'pop-up');
+				$(this).css('animation-name', 'pop-up');
 			  }
 			});
 		

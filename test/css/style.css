@@ -1464,6 +1464,7 @@
 
 			#banner {
 				padding: 7em 3em 5em 3em ;
+				min-height: 15em;
 				/* height: auto;
 				min-height: 0; */
 			}
@@ -1486,7 +1487,7 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		min-height: inherit;
+		min-height: 100%;
 		width: 100%;
 		z-index: -1;
 		opacity: 0.5;
@@ -1613,7 +1614,7 @@
 			-moz-animation-fill-mode: both;
 			-webkit-animation-fill-mode: both;
 			-o-animation-fill-mode: both;
-			-ms-animation:-fill-mode: both;
+			-ms-animation-fill-mode: both;
 			animation-fill-mode: both;
 			-moz-animation-delay: 0s;
 			-webkit-animation-delay: 0s;
@@ -1627,6 +1628,19 @@
 			animation-duration: .7s;
 			top: 5em;
 		}
+		
+			@media screen and (max-width: 736px) {
+			
+				.front-content-wrapper .product img{
+					padding: 0.25em;
+					-moz-animation-fill-mode: none;
+					-webkit-animation: none;
+					-o-animation: none;
+					-ms-animation: none;
+					animation: none;
+					top: 0;
+				}
+			}
 	
 	.front-content-wrapper .coll{
 		color: #fff;
@@ -1652,8 +1666,3 @@
 		background-size: cover;
 	}
 	
-	-moz-animation: reveal-header 0.5s;
-	-webkit-animation: reveal-header 0.5s;
-	-o-animation: reveal-header 0.5s;
-	-ms-animation: reveal-header 0.5s;
-	animation: reveal-header 0.5s;
