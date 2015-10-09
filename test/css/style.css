@@ -1340,9 +1340,9 @@
 			box-shadow: none;
 		}
 
-			/* #header.alt h1 {
-				
-			} */
+			#header.alt h1::after {
+				background-color: transparent;
+			} 
 /* Banner */
 
 	#banner {
@@ -1480,10 +1480,10 @@
 	} */
 	
 	.copperi-link {
-		moz-transition: opacity 0.2s ease;
-		-webkit-transition: opacity 0.2s ease;
-		-ms-transition: opacity 0.2s ease;
-		transition: opacity 0.2s ease;
+		moz-transition: opacity 0.3s ease-in-out;
+		-webkit-transition: opacity 0.3s ease-in-out;
+		-ms-transition: opacity 0.3s ease-in-out;
+		transition: opacity 0.3s ease-in-out;
 		display: block;
 		width: 100%;
 		border: 0;
@@ -1553,6 +1553,11 @@
 	.front-content-wrapper .product {
 		color: #2b2b2b;
 	}
+		
+		.front-content-wrapper .product h3+p{
+			font-size: 1.25em;
+			margin-top: 0.5em;			
+		}
 		
 		@-moz-keyframes pop-up { 0% { top: 5em; } 100% { top: 0; } }
 		@-webkit-keyframes pop-up { 0% { top: 5em; } 100% { top: 0; } }
