@@ -1350,7 +1350,7 @@
 			} 
 /* Banner */
 
-	#banner {
+	.banner {
 		display: table;
 		cursor: default;
 		min-height: 35em;
@@ -1359,9 +1359,10 @@
 		position: relative;
 		text-align: center;
 		color: #fff;
+		width: 100%;
 	}
 
-		#banner h2 {
+		.banner h2 {
 			-moz-transform: scale(1);
 			-webkit-transform: scale(1);
 			-ms-transform: scale(1);
@@ -1380,7 +1381,7 @@
 			font-family: 'EB Garamond', serif; */
 		}
 
-			#banner h2:after {
+			.banner h2:after {
 				-moz-transition: width 0.85s ease;
 				-webkit-transition: width 0.85s ease;
 				-ms-transition: width 0.85s ease;
@@ -1397,43 +1398,43 @@
 				width: 70%;
 			}
 
-			#banner h2:after {
+			.banner h2:after {
 				bottom: 0;
 				right: 15%;
 			}
 
-		#banner p {
+		.banner p {
 			letter-spacing: 0.225em;
 			text-transform: none;
 			font-style: italic;
 		}
 
-			#banner p a {
+			.banner p a {
 				color: inherit;
 			}
 
-		#banner .inner {
+		.banner .inner {
 			display: table-cell;
 			vertical-align: middle;
 		}
 		
 		@media screen and (max-width: 736px) {
 
-			#banner {
+			.banner {
 				padding: 4em 1em 2em 1em ;
 				min-height: 5em;
 				height: 5em;
 			}
 
-				#banner h2 {
+				.banner h2 {
 					font-size: 1.25em;
 				}
 
-				#banner br {
+				.banner br {
 					display: none;
 				}
 
-				#banner .more {
+				.banner .more {
 					display: none;
 				}
 
