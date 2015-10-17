@@ -40,8 +40,8 @@
 			
 			skel.layout({
 				reset: "full",
-				conditionals: true
-				// grid: true
+				conditionals: true,
+				grid: true
 			});
 			
 			// $(document).ready(function(){
