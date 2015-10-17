@@ -4,8 +4,8 @@
 	skel
 		.breakpoints({
 			xlarge:	'(max-width: 1680px)',
-			large:	'(max-width: 1280px)',
-			medium:	'(max-width: 980px)',
+			// large:	'(max-width: 1280px)',
+			// medium:	'(max-width: 980px)',
 			small:	'(max-width: 736px)',
 			xsmall:	'(max-width: 480px)',
 			mobile:	'(max-width: 320px)'
@@ -16,7 +16,7 @@
 		var	$window = $(window),
 			$body = $('body'),
 			$wrapper = $('#page-wrapper'),
-			$banner = $('#banner'),
+			$banner = $('#banner-wrapper'),
 			$header = $('#header');
 
 		// Disable animations/transitions until the page has loaded.
@@ -40,8 +40,8 @@
 			
 			skel.layout({
 				reset: "full",
-				conditionals: true,
-				grid: true
+				conditionals: true
+				// grid: true
 			});
 			
 			// $(document).ready(function(){
