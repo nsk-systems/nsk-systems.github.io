@@ -2083,7 +2083,7 @@
 					ul.actions li > * {
 						margin: 0 auto !important;
 						max-width: 30em;
-						width: 100%;
+						/* width: 100%; */
 					}
 
 						ul.actions li > *.icon:before {
@@ -2315,11 +2315,16 @@
 		input[type="button"].special-wht,
 		button.special-wht,
 		.button.special-wht{
+			outline: 0;
 			background-color: #fff;
 			box-shadow: none !important;
 			color: #2b2b2b !important;
 			height: 4em;
 			line-height: 4em;
+			-moz-transition: -moz-transform 0.1s ease;
+			-webkit-transition: -webkit-transform 0.1s ease;
+			-ms-transition: -ms-transform 0.1s ease;
+			transition: transform 0.1s ease;
 		}
 
 			input[type="submit"].special-wht:hover,
@@ -2518,16 +2523,12 @@
 	@keyframes reveal-header { 0% { top: -5em; } 100% { top: 0; } }
 
 	#header {
-		/* -moz-transition: background-color 0.2s ease;
-		-webkit-transition: background-color 0.2s ease;
-		-ms-transition: background-color 0.2s ease;
-		transition: background-color 0.2s ease; */
 		-moz-animation: reveal-header 0.5s;
 		-webkit-animation: reveal-header 0.5s;
 		-o-animation: reveal-header 0.5s;
 		-ms-animation: reveal-header 0.5s;
 		animation: reveal-header 0.5s;
-		background: #fff;/* #2e3842; */
+		background: #fff;
 		height: 3em;
 		left: 0;
 		line-height: 3em;
@@ -2550,16 +2551,12 @@
 		}
 		
 		#header h1 {
-			/* -moz-transition: opacity 0.2s ease;
-			-webkit-transition: opacity 0.2s ease;
-			-ms-transition: opacity 0.2s ease;
-			transition: opacity 0.2s ease; */
 			height: inherit;
 			left: 1.25em;
 			line-height: inherit;
 			position: absolute;
 			top: 0;
-			font-family: 'EB Garamond';
+			font-family: 'EB Garamond', sans-serif;
 			font-weight: 400;
 			color: inherit;
 			font-size: 1.25em;
@@ -2696,45 +2693,15 @@
 	}
 
 		.banner h2 {
-			-moz-transform: scale(1);
-			-webkit-transform: scale(1);
-			-ms-transform: scale(1);
-			transform: scale(1);
-			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
-			-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
-			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
-			transition: transform 0.5s ease, opacity 0.5s ease;
 			display: inline-block;
-			font-size: 2.5em;
+			font-size: 3em;
+			margin-bottom: 0.1em;
 			opacity: 1;
 			padding: 0.35em 1em;
 			position: relative;
 			z-index: 1;
-			/* text-transform: none;
-			font-family: 'EB Garamond', serif; */
+			letter-spacing: 0.1em;
 		}
-
-			.banner h2:after {
-				-moz-transition: width 0.85s ease;
-				-webkit-transition: width 0.85s ease;
-				-ms-transition: width 0.85s ease;
-				transition: width 0.85s ease;
-				-moz-transition-delay: 0.25s;
-				-webkit-transition-delay: 0.25s;
-				-ms-transition-delay: 0.25s;
-				transition-delay: 0.25s;
-				background: orange;
-				content: '';
-				display: block;
-				height: 2px;
-				position: absolute;
-				width: 70%;
-			}
-
-			.banner h2:after {
-				bottom: 0;
-				right: 15%;
-			}
 
 		.banner p {
 			letter-spacing: 0.225em;
@@ -2791,18 +2758,6 @@
 		-webkit-transform: scale(0.95);
 		-ms-transform: scale(0.95);
 		transform: scale(0.95);
-		opacity: 0;
-	}
-
-		body.is-loading #banner h2:after {
-			width: 0;
-		}
-
-	body.is-loading #banner .more {
-		-moz-transform: translateY(8.5em);
-		-webkit-transform: translateY(8.5em);
-		-ms-transform: translateY(8.5em);
-		transform: translateY(8.5em);
 		opacity: 0;
 	}
 
