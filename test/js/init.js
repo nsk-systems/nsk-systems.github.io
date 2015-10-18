@@ -58,10 +58,10 @@
 			$(document).ready(function(){
 			  $('.owl-carousel').slick({
 				dots: true,
-				arrows: false,
-				infinite: false,
+				arrows: true,
+				infinite: true,
 				speed: 700,
-				accessibility: false,
+				accessibility: true,
 				adaptiveHeight: true
 			  });
 			});
