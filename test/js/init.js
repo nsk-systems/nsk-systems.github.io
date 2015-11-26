@@ -66,6 +66,26 @@
 			  });
 			});
 			
+			//Слайдеры для товара
+			$(document).ready(function(){
+			  $('.slider-item').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: '.slider-nav'
+			  });
+			  $('.slider-nav').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				rows: 3,
+				asNavFor: '.slider-item',
+				dots: true,
+				centerMode: true,
+				focusOnSelect: true
+			  });
+			});
+			
 			$('.pop').scrollex({
 			  enter: function() {
 				$(this).css('-moz-animation-name', 'pop-up');
