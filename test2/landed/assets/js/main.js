@@ -59,7 +59,7 @@
 			// Title Bar.
 				$(
 					'<div id="titleBar">' +
-						'<a href="#navPanel" class="toggle"></a>' +
+						'<a href="tel:+7 (495) 123-45-67" class="toggle"></a>' +
 						'<span class="title">' + $('#logo').html() + '</span>' +
 					'</div>'
 				)
