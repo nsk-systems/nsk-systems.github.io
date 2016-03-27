@@ -300,7 +300,8 @@
 
 			$banner
 				._parallax();
-
+				
+		
 	});
 
 })(jQuery);
