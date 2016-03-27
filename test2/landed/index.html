@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="stylesheet" href="assets/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 	</head>
 	<body class="landing" id="top">
 		<div id="page-wrapper">
@@ -68,15 +69,11 @@
 								<div class="4u 12u$(medium)">
 									<header>
 										<h2>Очаровательные столешницы из переработанного стекла</h2>
-										<p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
+										<!-- <p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p> -->
 									</header>
 								</div>
 								<div class="4u 12u$(medium)">
-									<p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-									Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-									nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
-									augue varius tempus lobortis porttitor accumsan consequat
-									adipiscing lorem dolor.</p>
+									<p>Да, Вы всё правильно прочитали. Vitronite™ от d'ecorce изготовлен из переработанного стекла на нашем собственном производстве в Московской области. Vitronite™ универсальный, чрезвычайно прочный и непористый материал, поэтому на нём не остаются пятна и он необычайно прост в уходе. Всё это делает его самым экологичным материалом для столешниц, барных стоек, подоконников и других архитектурных поверхностей. Пожалуйста, звоните нам по любым вопросам или приходите в наш шоу-рум, чтобы увидеть Vitronite™ лично.</p>
 								</div>
 								<div class="4u$ 12u$(medium)">
 									<p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
@@ -127,7 +124,7 @@
 				<section id="four" class="wrapper style1 special fade-up">
 					<div class="container 75%">
 						<header class="major">
-							<h2>Accumsan sed tempus adipiscing blandit</h2>
+							<h2>Вы можете представить - <strong>мы можем сделать</strong></h2>
 							<p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
 						</header>
 						<div class="box alt">
@@ -247,6 +244,15 @@
 						<div id="fold" class="row uniform 50%" style="display: none">
 							<div class="3u 4u(small) 6u(xsmall)">
 								<section>
+									<a href="images/colors/Vitronite-by-decorce-Lollipop.jpg" rel="colors" class="image featured fancybox"><img src="images/colors/thumb/Vitronite-by-decorce-Lollipop.jpg" alt="" title="Lollipop"/>
+									<div class="white_box">
+										<p>Lollipop</p>
+									</div>
+									</a>
+								</section>
+							</div>
+							<div class="3u 4u(small) 6u(xsmall)">
+								<section>
 									<a href="images/colors/Vitronite-by-decorce-EZ.jpg" rel="colors" class="image featured fancybox"><img src="images/colors/thumb/Vitronite-by-decorce-EZ.jpg" alt="" />
 									<div class="white_box">
 										<p>EZ</p>
@@ -364,6 +370,29 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			
+			<script type="text/javascript" src="assets/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+			<script type="text/javascript">
+			$(document).ready(function() {
+				$(".fancybox").fancybox({
+					padding		: 0,
+					autoSize : false,
+					beforeLoad : function() {         
+						this.width  = parseInt(this.element.data('fancybox-width'));  
+						this.height = parseInt(this.element.data('fancybox-height'));
+					},
+					helpers: {
+							title : {
+								type : 'outside'
+							},
+							overlay : {
+								speedOut : 0,
+								showEarly : true
+								}
+							}
+				});
+			});
+			</script>
 
 	</body>
 </html>
