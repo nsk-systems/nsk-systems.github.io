@@ -1591,7 +1591,7 @@
 
 	strong, b {
 		color: #56595a;/* #ffffff; */
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	em, i {
@@ -2392,6 +2392,10 @@
 			display: none;
 		}
 
+		.icon.alt2 {
+			line-height: 2em; /* my */
+		}
+		
 		.icon.alt {
 			text-decoration: none;
 		}
