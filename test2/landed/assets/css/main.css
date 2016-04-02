@@ -3129,6 +3129,10 @@
 			background: #83D3C9;
 			color: #ffffff;
 		}
+		
+			.wrapper.style2 a {
+				color: #f0f0f0;
+			}
 
 			.wrapper.style2 input[type="text"],
 			.wrapper.style2 input[type="password"],
@@ -3144,6 +3148,12 @@
 			.wrapper.style2 select:focus,
 			.wrapper.style2 textarea:focus {
 				border-color: rgba(255, 255, 255, 0.7);
+			}
+			
+			.wrapper.style2 .button.alt {
+				background-color: rgba(255, 255, 255, 0.25) !important;
+				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+				color: #ffffff !important;
 			}
 
 			.wrapper.style2 input[type="submit"]:hover, .wrapper.style2 input[type="submit"]:active,
