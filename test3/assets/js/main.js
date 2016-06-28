@@ -23,6 +23,15 @@
 			small:	'(max-width: 736px)',
 			xsmall:	'(max-width: 480px)'
 		});
+		
+	// Viewport	
+		skel.viewport({
+			breakpoints: {
+				small: {
+					scalable: false
+				}
+			}
+		});
 
 	// Disable animations/transitions until everything's loaded.
 		$body.classList.add('is-loading');
