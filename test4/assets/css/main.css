@@ -2815,6 +2815,10 @@
 		.inline-form {
 			min-width: 35vw;
 		}
+		
+		.phone {
+			white-space: nowrap;
+		}
 
 /* Wide */
 
