@@ -2811,6 +2811,10 @@
 			display: inline-block;
 			width: 5em;
 		}
+		
+		.inline-form {
+			min-width: 35vw;
+		}
 
 /* Wide */
 
@@ -3492,6 +3496,11 @@
 				left: 8px;
 				width: 50px;
 				height: 34px;
+			}
+			
+			.inline-form {
+				min-width: 80vw;
+				max-width: 85vw;
 			}
 
 	}
