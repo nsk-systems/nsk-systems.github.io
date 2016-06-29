@@ -2819,6 +2819,22 @@
 		.phone {
 			white-space: nowrap;
 		}
+		
+		#map {
+			height:350px;
+			margin-top: 3em;
+			width:auto;
+		}
+		.gm-style-iw * {
+			display: block;
+		}
+		.gm-style-iw h4, .gm-style-iw p {
+			margin: 0;
+			padding: 0;
+		}
+		.gm-style-iw a {
+			color: #4272db;
+		}
 
 /* Wide */
 
