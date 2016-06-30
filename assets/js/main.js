@@ -1,221 +1,157 @@
-/*
-	Twenty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/* skel-baseline v3.0.1 | (c) n33 | skel.io | MIT licensed */
 
 (function($) {
 
-	skel.breakpoints({
-		wide: '(max-width: 1680px)',
-		normal: '(max-width: 1280px)',
-		narrow: '(max-width: 980px)',
-		narrower: '(max-width: 840px)',
-		mobile: '(max-width: 736px)'
-	});
-	
-	skel.viewport({
-		breakpoints: {
-			mobile: {
-				scalable: false
-			}
-		}
-	});
+	"use strict";
 
-	$(function() {
+	// Methods/polyfills.
 
+		// addEventsListener
+			var addEventsListener=function(o,t,e){var n,i=t.split(" ");for(n in i)o.addEventListener(i[n],e)}
+
+		// classList | (c) @remy | github.com/remy/polyfills | rem.mit-license.org
+			!function(){function t(t){this.el=t;for(var n=t.className.replace(/^\s+|\s+$/g,"").split(/\s+/),i=0;i<n.length;i++)e.call(this,n[i])}function n(t,n,i){Object.defineProperty?Object.defineProperty(t,n,{get:i}):t.__defineGetter__(n,i)}if(!("undefined"==typeof window.Element||"classList"in document.documentElement)){var i=Array.prototype,e=i.push,s=i.splice,o=i.join;t.prototype={add:function(t){this.contains(t)||(e.call(this,t),this.el.className=this.toString())},contains:function(t){return-1!=this.el.className.indexOf(t)},item:function(t){return this[t]||null},remove:function(t){if(this.contains(t)){for(var n=0;n<this.length&&this[n]!=t;n++);s.call(this,n,1),this.el.className=this.toString()}},toString:function(){return o.call(this," ")},toggle:function(t){return this.contains(t)?this.remove(t):this.add(t),this.contains(t)}},window.DOMTokenList=t,n(Element.prototype,"classList",function(){return new t(this)})}}();
+
+	// Vars.
 		var	$window = $(window),
-			$body = $('body'),
+			$body = document.querySelector('body'),
 			$header = $('#header'),
 			$banner = $('#banner');
 
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+	// Breakpoints.
+		skel.breakpoints({
+			xlarge:	'(max-width: 1680px)',
+			large:	'(max-width: 1280px)',
+			medium:	'(max-width: 980px)',
+			small:	'(max-width: 736px)',
+			xsmall:	'(max-width: 480px)'
+		});
+		
+	// Viewport	
+		skel.viewport({
+			breakpoints: {
+				small: {
+					scalable: false
+				}
+			}
+		});
 
-			$window.on('load', function() {
-				$body.removeClass('is-loading');
+	// Disable animations/transitions until everything's loaded.
+		$body.classList.add('is-loading');
+
+		window.addEventListener('load', function() {
+			$body.classList.remove('is-loading');
+		});
+
+	// Nav.
+		var	$nav = document.querySelector('#nav'),
+			$navToggle = document.querySelector('a[href="#nav"]'),
+			$navClose;
+
+		
+		// Hide function
+			var hideNav=function(){
+				$nav.classList.remove('visible');
+				$body.classList.remove('menu-visible');
+			};
+			
+		// Event: Prevent clicks/taps inside the nav from bubbling.
+			addEventsListener($nav, 'click touchend', function(event) {
+				event.stopPropagation();
 			});
 
-		// CSS polyfills (IE<9).
-			if (skel.vars.IEVersion < 9)
-				$(':last-child').addClass('last-child');
-
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
-
-		// Prioritize "important" elements on narrower.
-			skel.on('+narrower -narrower', function() {
-				$.prioritize(
-					'.important\\28 narrower\\29',
-					skel.breakpoint('narrower').active
-				);
+		// Event: Hide nav on body click/tap.
+			addEventsListener($body, 'click touchend', function(event) {
+				hideNav();
 			});
+			
+		// Toggle.
 
-		// Scrolly links.
-			$('.scrolly').scrolly({
-				speed: 1000,
-				offset: -10
-			});
+			// Event: Toggle nav on click.
+				$navToggle.addEventListener('click', function(event) {
 
-		// Dropdowns.
-			$('#nav > ul').dropotron({
-				mode: 'fade',
-				noOpenerFade: true,
-				expandMode: (skel.vars.touch ? 'click' : 'hover')
-			});
+					event.preventDefault();
+					event.stopPropagation();
 
-		// Off-Canvas Navigation.
-
-			// Navigation Button.
-				$(
-					'<div id="navButton">' +
-						'<a href="#navPanel" class="toggle"></a>' +
-					'</div>'
-				)
-					.appendTo($body);
-
-			// Navigation Panel.
-				$(
-					'<div id="navPanel">' +
-						'<nav>' +
-							$('#nav').navList() +
-						'</nav>' +
-					'</div>'
-				)
-					.appendTo($body)
-					.panel({
-						delay: 500,
-						hideOnClick: true,
-						hideOnSwipe: true,
-						resetScroll: true,
-						resetForms: true,
-						side: 'left',
-						target: $body,
-						visibleClass: 'navPanel-visible'
-					});
-
-			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
-				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-					$('#navButton, #navPanel, #page-wrapper')
-						.css('transition', 'none');
-
-		// Header.
-		// If the header is using "alt" styling and #banner is present, use scrollwatch
-		// to revert it back to normal styling once the user scrolls past the banner.
-		// Note: This is disabled on mobile devices.
-			if (!skel.vars.mobile
-			&&	$header.hasClass('alt')
-			&&	$banner.length > 0) {
-
-				$window.on('load', function() {
-
-					$banner.scrollwatch({
-						delay:		0,
-						range:		1,
-						anchor:		'top',
-						on:			function() { $header.addClass('alt reveal'); },
-						off:		function() { $header.removeClass('alt'); }
-					});
+					$nav.classList.toggle('visible');
+					$body.classList.toggle('menu-visible');
 
 				});
 
-			}
+		// Close.
 
-	});
-	
-	$(document).ready(function() {
-		$(".fancybox").fancybox({
-			padding		: 0,
-			autoSize : true,
-			fitToView : true,
-			beforeLoad : function() {         
-				this.width  = parseInt(this.element.data('fancybox-width'));  
-				this.height = parseInt(this.element.data('fancybox-height'));
-				this.fitToView  = !(this.element.data('fancybox-fit') == false);
-			},
-			helpers: {
-					title : {
-						type : 'outside'
-					},
-					overlay : {
-						speedOut : 0,
-						showEarly : true
-						}
-					}
+			// Create element.
+				$navClose = document.createElement('a');
+					$navClose.href = '#';
+					$navClose.className = 'close';
+					$navClose.tabIndex = 0;
+					$nav.appendChild($navClose);
+
+			// Event: Hide on ESC.
+				window.addEventListener('keydown', function(event) {
+
+					if (event.keyCode == 27)
+						hideNav();
+
+				});
+
+			// Event: Hide nav on click.
+				$navClose.addEventListener('click', function(event) {
+
+					event.preventDefault();
+					event.stopPropagation();
+
+					hideNav();
+
+				});
+				
+		// Close on link click GRN
+		var
+			$this = $('#nav');
+			
+		$this.on('click', 'a', function(event) {
+
+			var $a = $(this),
+				href = $a.attr('href'),
+				target = $a.attr('target');
+
+			// if (!href || href == '#' || href == '' || href == '#' + id)
+				// return;
+
+			// Cancel original event.
+				event.preventDefault();
+				event.stopPropagation();
+
+			// Hide panel.
+				hideNav();
+
+			// Redirect to href.
+				window.setTimeout(function() {
+
+					if (target == '_blank')
+						window.open(href);
+					else
+						window.location.href = href;
+
+				}, 500);
+
 		});
-	});
-	
-	// Forms validation
-	$(".ajax-form-msg").validate({
-		rules: {
-			name: {
-			required: true,
-			minlength: 2
-			},
-			email: {
-			required: true,
-			email: true
-			},
-			message: {
-			required: true,
-			}
-		},
-		messages: {
-			name: "Укажите Ваше имя",
-			email: {
-			  required: "Укажите Ваш e-mail",
-			  email: "Формат: name@domain.com"
-			},
-			message: {
-			  required: "Напишите нам что-нибудь"
-			}
-		},
-		// errorPlacement: function(error, element) {
-		// },
-		submitHandler: function(form) {
-			$.ajax({
-				dataType: "jsonp",
-				url: "http://getsimpleform.com/messages/ajax?form_api_token=f346c137e5a7ca4624adddbae2e9b3a4",
-				data: $(".ajax-form-msg").serialize() 
-				}).done(function() {
-				//callback which can be used to show a thank you message
-				//and reset the form
-				$(".ajax-form-msg").hide();
-				$(".form-thank-you-msg").fadeIn("400");
+	// Header.
+		if (skel.vars.IEVersion < 9)
+			$header.removeClass('alt');
+
+		if ($banner.length > 0
+		&&	$header.hasClass('alt')) {
+
+			$window.on('resize', function() { $window.trigger('scroll'); });
+
+			$banner.scrollex({
+				bottom:		$header.outerHeight() + 1,
+				terminate:	function() { $header.removeClass('alt'); },
+				enter:		function() { $header.addClass('alt reveal'); },
+				leave:		function() { $header.removeClass('alt'); }
 			});
-			return false; //to stop the form from submitting
+
 		}
-	});
-	
-	$(".ajax-form-callback").validate({
-		rules: {
-			name: {
-			required: true,
-			minlength: 2
-			},
-			phone: {
-			required: true
-			}
-		},
-		messages: {
-			name: "Укажите Ваше имя",
-			phone: "Укажите Ваш телефон"
-		},
-		// errorPlacement: function(error, element) {
-		// },
-		submitHandler: function(form) {
-			$.ajax({
-				dataType: "jsonp",
-				url: "http://getsimpleform.com/messages/ajax?form_api_token=f346c137e5a7ca4624adddbae2e9b3a4",
-				data: $(".ajax-form-callback").serialize() 
-				}).done(function() {
-				//callback which can be used to show a thank you message
-				//and reset the form
-				$(".ajax-form-callback").hide();
-				$(".form-thank-you-callback").fadeIn("400");
-			});
-			return false; //to stop the form from submitting
-		}
-	});
 
 })(jQuery);
