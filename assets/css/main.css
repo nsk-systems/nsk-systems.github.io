@@ -2024,14 +2024,12 @@
 /* Image */
 
 	.image {
-		border-radius: 4px;
 		border: 0;
 		display: inline-block;
 		position: relative;
 	}
 
 		.image img {
-			border-radius: 4px;
 			display: block;
 		}
 
@@ -2057,7 +2055,6 @@
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2em 0;
 			width: 100%;
 		}
 
@@ -2491,24 +2488,6 @@
 
 		}
 
-/* Grid Demo */
-
-	.grid-demo {
-		display: block;
-		margin: 0 0 2em 0;
-	}
-
-		.grid-demo span {
-			background: #e4f0fc;
-			border-radius: 4px;
-			color: rgba(0, 0, 0, 0.25);
-			display: block;
-			font-weight: bold;
-			height: 2.75em;
-			line-height: 2.75em;
-			text-align: center;
-		}
-
 /* Header */
 
 	@-moz-keyframes reveal-header {
@@ -2830,7 +2809,6 @@
 
 	.banner {
 		display:flex;
-		background: #2b2b2b;
 		text-align: center;
 		min-height: 70vh;
 		height: 100%;
@@ -2999,3 +2977,61 @@
 			opacity: 1;
 			visibility: visible;
 		}
+		
+/* Copperi related stuff */
+		
+	.copperi-link {
+		moz-transition: opacity 0.3s ease-in-out;
+		-webkit-transition: opacity 0.3s ease-in-out;
+		-ms-transition: opacity 0.3s ease-in-out;
+		transition: opacity 0.3s ease-in-out;
+		display: flex;
+		width: 100%;
+		border: solid 1px #eee;
+		border-left: 0;
+		margin-top: -1px;
+		background: #fff;
+		opacity: 1;
+		height: 30em;
+	}
+	
+		.copperi-link:hover{
+			opacity: 0.7;
+		}
+
+	@media screen and (max-width: 980px) {
+		
+		.copperi-link {
+			height: 22em;
+		}
+	}
+	
+	@media screen and (max-width: 736px) {
+		
+		.copperi-link {
+			height: 25em;
+		}
+	}
+	
+	@media screen and (max-width: 480px) {
+		
+		.copperi-link {
+			height: 20em;
+		}
+	}
+	
+	.image-wrapper {
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+	
+	.inner-wrapper {
+		padding: 1em;
+		margin: auto;
+	}
