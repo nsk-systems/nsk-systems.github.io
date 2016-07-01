@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
+@import 'https://fonts.googleapis.com/css?family=Cormorant:500|Open+Sans:300,700&subset=cyrillic';
 
 /* skel-baseline v3.0.1 | (c) n33 | skel.io | MIT licensed */
 
@@ -1565,6 +1566,10 @@
 	body {
 		background: #fff;
 	}
+	
+		body.menu-visible{
+			overflow: hidden !important;
+		}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 			-moz-animation: none !important;
@@ -1581,7 +1586,7 @@
 
 	body, input, select, textarea {
 		color: #444;
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: 'Open Sans', sans-serif;
 		font-size: 13pt;
 		font-weight: normal;
 		line-height: 1.65;
@@ -2623,7 +2628,7 @@
 				text-transform: uppercase;
 			}
 
-				#header > a[href="#nav"]:before {
+				#header > a[href="#nav"]:after {
 					content: "";
 					-moz-osx-font-smoothing: grayscale;
 					-webkit-font-smoothing: antialiased;
@@ -2633,8 +2638,8 @@
 					text-transform: none !important;
 				}
 
-				#header > a[href="#nav"]:before {
-					margin: 0 0.5em 0 0;
+				#header > a[href="#nav"]:after {
+					margin: 0 0 0 0.5em;
 				}
 
 			#header > a + a[href="#nav"]:last-child {
@@ -2717,7 +2722,7 @@
 		top: 0;
 		visibility: hidden;
 		width: 35em;
-		z-index: 10002;
+		z-index: 10003;
 	}
 
 		#nav  ul {
@@ -2950,4 +2955,28 @@
 					padding-left: 0;
 				}
 
+		}
+		
+/* Page wrapper */
+
+	#page-wrapper {
+	}
+	
+		#page-wrapper:before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: rgba(0,0,0,0.7);
+			opacity: 0;
+			transition: opacity 0.4s, visibility 0.4s;
+			visibility: hidden;
+			z-index: 10002;
+		}
+		
+		body.menu-visible #page-wrapper:before {
+			opacity: 1;
+			visibility: visible;
 		}
