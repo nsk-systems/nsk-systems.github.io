@@ -2834,10 +2834,24 @@
 		text-align: center;
 		min-height: 70vh;
 		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
 	}
+	
+		.banner:before {
+			content: '';
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,0.03);
+		}
 		
 		.banner .inner{
 			margin: auto;
+			z-index: 2;
 		}
 
 		.banner h2 {
@@ -2851,7 +2865,7 @@
 			font-size: 1.5em;
 			margin-bottom: 1.75em;
 		}
-
+		
 		@media screen and (max-width: 1680px) {
 
 			.banner {
