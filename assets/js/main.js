@@ -16,7 +16,7 @@
 		var	$window = $(window),
 			$body = document.querySelector('body'),
 			$header = $('#header'),
-			$banner = $('#banner');
+			$banner = $('#banner-wrapper');
 
 	// Breakpoints.
 		skel.breakpoints({
@@ -164,6 +164,14 @@
 		if (skel.vars.IEVersion < 9)
 			$header.removeClass('alt');
 
-		
+	// Slick slider	
+		$(document).ready(function(){
+			  $('.slick').slick({
+				dots: true,
+				arrows: true,
+				infinite: true,
+				speed: 700
+			  });
+			});
 
 })(jQuery);
