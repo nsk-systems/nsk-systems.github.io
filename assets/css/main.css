@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
-@import 'https://fonts.googleapis.com/css?family=Cormorant:500|Open+Sans:400,700&subset=cyrillic';
+@import 'https://fonts.googleapis.com/css?family=Cormorant:500|Open+Sans:400,600,700&subset=cyrillic';
 
 
 
@@ -924,7 +924,6 @@
 		.button.special {
 			background-color: #ffffff;
 			color: #2b2b2b !important;
-			transition: transform 0.1s ease;
 		}
 
 			input[type="submit"].special:hover,
@@ -1497,7 +1496,7 @@
 		
 /* Copperi related stuff */
 	.copperi-link {
-		moz-transition: opacity 0.3s ease-in-out;
+		-moz-transition: opacity 0.3s ease-in-out;
 		-webkit-transition: opacity 0.3s ease-in-out;
 		-ms-transition: opacity 0.3s ease-in-out;
 		transition: opacity 0.3s ease-in-out;
@@ -1513,6 +1512,8 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
+		align-items: center;
+		justify-content: center;
 	}
 	
 		.copperi-link:hover{
@@ -1542,6 +1543,7 @@
 	
 	.inner-wrapper{
 		margin: auto;
+		width: 100%;
 	}
 	
 		.inner-wrapper h3 {
@@ -1570,3 +1572,69 @@
 	.category {
 		color: #ffffff;
 	}
+	
+	.wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		background-color: rgba(0,0,0,0.3);
+	}
+	
+	.view-more {
+		margin-top: 3em;
+	}
+	
+		.view-more a {
+			text-transform: uppercase;
+			font-size: 1.2em;
+			font-weight: 600;
+			letter-spacing: 0.2em;
+			position: relative;
+			transition: opacity .2s ease-in-out;
+		}
+		
+		@media screen and (max-width: 480px) {
+			
+			.view-more {
+				margin-top: 1em;
+			}
+	
+			.view-more a {
+				font-size: 0.9em;
+			}
+		}
+		
+		.view-more a:after {
+			content: '';
+			position: absolute;
+			bottom: -1px;
+			background-color: #2b2b2b;
+			height: 1px;
+			left: 0;
+			width: 100%;
+			transition: opacity .2s ease-in-out;
+		}
+		
+		.view-more a:hover {
+			opacity: 0.7;
+		}
+		
+	#pre-footer {
+		color: #b1b2b7;
+		margin-top: 5em;
+	}
+	
+		#pre-footer a{
+			color: inherit;
+			text-transform: uppercase;
+			font-weight: 600;
+			transition: opacity .2s ease-in-out;
+		}
+		
+			#pre-footer a:hover{
+				opacity: 0.7;
+			}
+		
+		#pre-footer a i{
+			margin-right: 0.75em;
+		}
