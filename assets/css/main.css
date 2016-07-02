@@ -133,6 +133,14 @@
 	h2 {
 		font-size: 2.25em;
 	}
+	
+		@media screen and (max-width: 480px) {
+			
+			h2 {
+				font-size: 1.5em;
+			}
+			
+		}
 
 	h3 {
 		font-size: 1.75em;
@@ -1078,13 +1086,36 @@
 			-ms-transition: color 0.2s ease-in-out;
 			transition: color 0.2s ease-in-out;
 			display: inline-block;
-			padding: 0 0.75em;
+			padding: 0 1.75em;
 			color: inherit;
 			text-decoration: none;
 		}
 
-			#header > a:hover {
+			#header > a.phone {
+				border-left: solid 1px #e5e5e5;
+				border-right: solid 1px #e5e5e5;
+			}
+			
+				#header.alt > a.phone {
+					border: 0;
+				}
+				
+				#header > a.phone:before {
+					content: "\f095";
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-font-smoothing: antialiased;
+					font-family: FontAwesome;
+					font-style: normal;
+					font-weight: normal;
+					text-transform: none !important;
+				}
+			
+			#header.alt > a:hover {
 				color: #e5e5e5;
+			}
+			
+			#header > a:hover {
+				color: #515151;
 			}
 
 			#header > a[href="#nav"] {
@@ -1108,7 +1139,6 @@
 				}
 
 			#header > a + a[href="#nav"]:last-child {
-				border-left: solid 1px rgba(255, 255, 255, 0.15);
 				padding-left: 1.25em;
 				margin-left: 0.5em;
 			}
@@ -1120,7 +1150,7 @@
 			@media screen and (max-width: 736px) {
 
 				#header > a {
-					padding: 0 0.5em;
+					padding: 0 2em;
 				}
 
 					#header > a + a[href="#nav"]:last-child {
@@ -1131,9 +1161,19 @@
 					#header > a:last-child {
 						padding-right: 1em;
 					}
-
+					
+					#header > a.phone span {
+						display:none;
+					}
 			}
+			
+			@media screen and (max-width: 736px) {
 
+				#header > a {
+					padding: 0 1em;
+				}
+			}
+			
 	@media screen and (max-width: 736px) {
 
 		body {
@@ -1314,7 +1354,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background: rgba(0,0,0,0.03);
+			background: rgba(0,0,0,0.1);
 		}
 		
 		.banner .inner{
