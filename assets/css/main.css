@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import 'https://fonts.googleapis.com/css?family=Cormorant:500|Open+Sans:300,700&subset=cyrillic';
+@import 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i&subset=cyrillic';
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,700&subset=cyrillic';
 
 /* skel-baseline v3.0.1 | (c) n33 | skel.io | MIT licensed */
 
@@ -1585,7 +1587,7 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #444;
+		color: #2b2b2b;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 13pt;
 		font-weight: normal;
@@ -1633,8 +1635,8 @@
 		}
 
 	a {
-		color: #5AA6ED;
-		text-decoration: underline;
+		color: #2b2b2b;
+		text-decoration: none;
 	}
 
 		a:hover {
@@ -1642,7 +1644,6 @@
 		}
 
 	strong, b {
-		color: #555;
 		font-weight: bold;
 	}
 
@@ -1655,10 +1656,11 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #555;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 1em 0;
+		text-transform: uppercase;
+		letter-spacing: 0.225em;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1666,6 +1668,10 @@
 			text-decoration: none;
 		}
 
+	h1 {
+		font-size: 2.1em;
+	}
+	
 	h2 {
 		font-size: 1.75em;
 	}
@@ -1758,9 +1764,9 @@
 	}
 
 	header p {
-		color: #bbb;
 		position: relative;
 		margin: 0 0 1.5em 0;
+		font-style: italic;
 	}
 
 	header h2 + p {
@@ -1769,7 +1775,7 @@
 	}
 
 	header h3 + p {
-		font-size: 1.1em;
+		font-size: 0.9em;
 		margin-top: -0.8em;
 	}
 
@@ -1787,7 +1793,6 @@
 	}
 
 	label {
-		color: #555;
 		display: block;
 		font-size: 0.9em;
 		font-weight: bold;
@@ -2213,7 +2218,6 @@
 						}
 
 						ul.actions li > * {
-							width: 100%;
 							margin: 0 !important;
 						}
 
@@ -2328,19 +2332,21 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: #5a5a5a;
-		border-radius: 4px;
+		background-color: #2b2b2b;
+		border-radius: 3px;
 		border: 0;
+		outline: 0;
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: bold;
-		height: 2.85em;
-		line-height: 2.95em;
-		padding: 0 1.5em;
+		height: 3.8em;
+		line-height: 3.95em;
+		padding: 0 2.5em;
 		text-align: center;
-		text-decoration: none;
+		text-transform: uppercase;
 		white-space: nowrap;
+		letter-spacing: 0.225em;
 	}
 
 		input[type="submit"]:hover,
@@ -2348,7 +2354,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #676767;
+			background-color: #383838;
 		}
 
 		input[type="submit"]:active,
@@ -2356,7 +2362,7 @@
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: #4d4d4d;
+			background-color: #444444;
 		}
 
 		input[type="submit"].icon,
@@ -2440,8 +2446,9 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #5AA6ED;
-			color: #ffffff !important;
+			background-color: #ffffff;
+			color: #2b2b2b !important;
+			transition: transform 0.1s ease;
 		}
 
 			input[type="submit"].special:hover,
@@ -2449,7 +2456,7 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #71b2f0;
+				background-color: #e5e5e5;
 			}
 
 			input[type="submit"].special:active,
@@ -2457,7 +2464,7 @@
 			input[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
-				background-color: #439aea;
+				transform: scale(0.98);
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2483,7 +2490,11 @@
 			input[type="button"],
 			button,
 			.button {
-				padding: 0;
+				padding: 0 1em;
+				letter-spacing: 0.1em;
+				height: 2.8em;
+				line-height: 2.95em;
+				font-size: 0.8em;
 			}
 
 		}
@@ -2551,6 +2562,7 @@
 		top: 0;
 		width: 100%;
 		z-index: 10001;
+		letter-spacing: 0.2em;
 	}
 	
 		#header.reveal {
@@ -2580,12 +2592,25 @@
 			padding: 0;
 			position: absolute;
 			top: 0;
+			font-size: 1.5em;
+			font-family: 'Cormorant', serif;
+			font-weight: 500;
 		}
-
-			#header > h1 a {
-				font-size: 1.25em;
+		
+			#header > h1 a:after{
+				content: '';
+				width: 80%;
+				position: absolute;
+				background-color: #faa928;
+				height: 2px;
+				left: 10%;
+				bottom: 20%;
 			}
-
+			
+			#header.alt > h1 a:after{
+				background-color: transparent;
+			}
+			
 		#header > a {
 			-moz-transition: color 0.2s ease-in-out;
 			-webkit-transition: color 0.2s ease-in-out;
@@ -2598,7 +2623,7 @@
 		}
 
 			#header > a:hover {
-				color: #444;
+				color: #e5e5e5;
 			}
 
 			#header > a[href="#nav"] {
@@ -2651,20 +2676,21 @@
 	@media screen and (max-width: 736px) {
 
 		body {
-			padding-top: 44px;
+			padding-top: 55px;
 		}
 		
 			body.index {
-				padding-top: 44px;
+				padding-top: 55px;
 			}
 
 		#header {
-			height: 44px;
-			line-height: 44px;
+			height: 55px;
+			line-height: 55px;
 		}
 
 			#header > h1 {
 				left: 1em;
+				font-size: 1.2em;
 			}
 
 				#header > h1 a {
@@ -2810,11 +2836,12 @@
 	.banner {
 		display:flex;
 		text-align: center;
-		min-height: 70vh;
+		min-height: 65vh;
 		height: 100%;
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
+		color: #ffffff;
 	}
 	
 		.banner:before {
@@ -2837,11 +2864,14 @@
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
+			text-transform: uppercase;
+			letter-spacing: 0.3em;
 		}
 
-		.banner p {
-			font-size: 1.5em;
+		.banner h2+p {
+			font-size: 1.2em;
 			margin-bottom: 1.75em;
+			font-style: italic;
 		}
 		
 		@media screen and (max-width: 1680px) {
@@ -2882,8 +2912,8 @@
 					font-size: 2.25em;
 				}
 
-				.banner p {
-					font-size: 1.25em;
+				.banner h2+p {
+					font-size: 1em;
 				}
 
 		}
@@ -2892,6 +2922,7 @@
 
 			.banner {
 				padding: 4em 2em 2em 2em;
+				min-height: 20em;
 			}
 
 		}
@@ -3016,7 +3047,7 @@
 	@media screen and (max-width: 480px) {
 		
 		.copperi-link {
-			height: 20em;
+			height: 18em;
 		}
 	}
 	
@@ -3029,9 +3060,35 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: cover;
+		color: #ffffff;
 	}
 	
 	.inner-wrapper {
 		padding: 1em;
 		margin: auto;
 	}
+	
+		.inner-wrapper h3{
+			font-size: 1.75em;
+		}
+			
+			@media screen and (max-width: 480px) {
+				
+				.inner-wrapper h3{
+					font-size: 1.5em;
+				}
+			}
+	
+		@media screen and (max-width: 736px) {
+			
+			.inner-wrapper {
+				padding: 0.5em;
+			}
+		}
+		
+		@media screen and (max-width: 480px) {
+			
+			.inner-wrapper {
+				padding: 0.25em;;
+			}
+		}
