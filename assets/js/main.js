@@ -163,7 +163,7 @@
 				
 		if (skel.vars.IEVersion < 9)
 			$header.removeClass('alt');
-
+	
 	// Slick slider	
 		$(document).ready(function(){
 			  $('.slick').slick({
