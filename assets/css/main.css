@@ -145,6 +145,14 @@
 	h3 {
 		font-size: 1.75em;
 	}
+	
+		@media screen and (max-width: 480px) {
+			
+			h3 {
+				font-size: 1.25em;
+			}
+			
+		}
 
 	h4 {
 		font-size: 1.1em;
@@ -1488,3 +1496,77 @@
 		}
 		
 /* Copperi related stuff */
+	.copperi-link {
+		moz-transition: opacity 0.3s ease-in-out;
+		-webkit-transition: opacity 0.3s ease-in-out;
+		-ms-transition: opacity 0.3s ease-in-out;
+		transition: opacity 0.3s ease-in-out;
+		display: flex;
+		width: 100%;
+		border: 0;
+		background: #fff;
+		opacity: 1;
+		height: 30em;
+		border: solid 1px #e5e5e5;
+		border-left: 0;
+		margin-top: -1px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+	
+		.copperi-link:hover{
+			opacity: 0.7;
+		}
+
+	@media screen and (max-width: 980px) {
+		
+		.copperi-link {
+			height: 22em;
+		}
+	}
+	
+	@media screen and (max-width: 736px) {
+		
+		.copperi-link {
+			height: 25em;
+		}
+	}
+	
+	@media screen and (max-width: 480px) {
+		
+		.copperi-link {
+			height: 18em;
+		}
+	}
+	
+	.inner-wrapper{
+		margin: auto;
+	}
+	
+		.inner-wrapper h3 {
+			margin: 0;
+		}
+		
+		.inner-wrapper h3+p{
+			font-style: italic;
+			margin: 0.5em 0 1em 0;
+		}
+		
+	.product p{
+		font-size: 1.5em;
+	}
+	
+		.product p:after{
+			content: '.';
+		}
+	
+		@media screen and (max-width: 480px) {
+			.product p{
+				font-size: 1.1em;
+			}
+		}
+	
+	.category {
+		color: #ffffff;
+	}
