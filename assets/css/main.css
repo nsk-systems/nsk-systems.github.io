@@ -1352,6 +1352,7 @@
 		background-position: center center;
 		background-size: cover;
 		color: #ffffff;
+		align-items: center;
 	}
 	
 	.small-banner {
@@ -1640,6 +1641,7 @@
 		height: 100%;
 		display: flex;
 		background-color: rgba(0,0,0,0.3);
+		align-items: center;
 	}
 	
 	.view-more {
@@ -1706,4 +1708,17 @@
 			#pre-footer {
 				margin-top: 3em;
 			}
+		}
+		
+	#product-hero {
+	}
+	
+		#product-hero img{
+			padding: 1em;
+			max-width: 100%;
+			max-height: 55vh;
+		}
+		
+		#product-hero header{
+			margin-bottom: 2em;
 		}
