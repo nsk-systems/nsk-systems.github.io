@@ -1017,7 +1017,7 @@
 	}
 	
 	body {
-		padding-top: 3.125em;
+		padding-top: 5em;
 	}
 		
 		body.index {
@@ -1391,6 +1391,10 @@
 			font-style: italic;
 		}
 		
+		.small-banner h2{
+			margin-bottom: 0;
+		}
+		
 		.small-banner h2+p{
 			margin-bottom: 0;
 		}
@@ -1430,7 +1434,7 @@
 			}
 			
 			.small-banner {
-				min-height: 10em;
+				min-height: 8em;
 			}
 
 		}
