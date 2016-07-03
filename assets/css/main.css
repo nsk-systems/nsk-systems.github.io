@@ -52,7 +52,7 @@
 		letter-spacing: 0.075em;
 	}
 
-		/* @media screen and (max-width: 1680px) {
+		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
 				font-size: 11pt;
@@ -66,7 +66,7 @@
 				font-size: 11pt;
 			}
 
-		} */
+		}
 
 		@media screen and (max-width: 980px) {
 
@@ -965,10 +965,8 @@
 			input[type="button"],
 			button,
 			.button {
-				padding: 0 1em;
+				padding: 0 1.2em;
 				letter-spacing: 0.1em;
-				height: 2.8em;
-				line-height: 2.95em;
 				font-size: 0.8em;
 			}
 
@@ -1711,6 +1709,7 @@
 		}
 		
 	#product-hero {
+		margin-bottom: 2em;
 	}
 	
 		#product-hero img{
@@ -1719,6 +1718,11 @@
 			max-height: 55vh;
 		}
 		
-		#product-hero header{
-			margin-bottom: 2em;
+	.hero-block {
+		margin-bottom: 2em;
+	}
+	
+		.hero-block p{
+			margin-bottom: 0;
 		}
+		
