@@ -233,7 +233,7 @@
 
 /* Section/Article */
 
-	section.special, article.special {
+	section.special, article.special, div.special {
 		text-align: center;
 	}
 
@@ -1354,6 +1354,13 @@
 		color: #ffffff;
 	}
 	
+	.small-banner {
+		min-height: 50vh;
+		position: relative;
+	}
+	
+		
+	
 		.banner:before {
 			content: '';
 			height: 100%;
@@ -1361,7 +1368,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background: rgba(0,0,0,0.1);
+			background: rgba(0,0,0,0.15);
 		}
 		
 		.banner .inner{
@@ -1384,10 +1391,18 @@
 			font-style: italic;
 		}
 		
+		.small-banner h2+p{
+			margin-bottom: 0;
+		}
+		
 		@media screen and (max-width: 980px) {
 
 			.banner {
 				min-height: 50vh;
+			}
+			
+			.small-banner {
+				min-height: 30vh;
 			}
 
 		}
@@ -1401,6 +1416,10 @@
 				.banner h2+p {
 					font-size: 1em;
 				}
+				
+				.small-banner {
+					min-height: 10em;
+				}
 
 		}
 
@@ -1409,19 +1428,33 @@
 			.banner {
 				min-height: 16em;
 			}
+			
+			.small-banner {
+				min-height: 10em;
+			}
 
 		}
+		
+	
 
 /* Main */
 
 	#main {
 		padding: 4em 0 2em 0;
 	}
+	
+	#not-main {
+		padding: 0 0 2em 0;
+	}
 
 		@media screen and (max-width: 736px) {
 
 			#main {
 				padding: 3em 0 1em 0;
+			}
+			
+			#not-main {
+				padding: 0 0 1em 0;
 			}
 
 		}
@@ -1430,19 +1463,44 @@
 
 	#footer {
 		padding: 4em 0 2em 0;
-		background: #f2f2f2;
+		background: #b1b2b7;
+		color: #ffffff;
 	}
+	
+		#footer a{
+			color: #ffffff;
+			text-transform: uppercase;
+		}
+		
+			#footer a:hover{
+				color: #e5e5e5;
+			}
+			
+		#footer ul.footer-links {
+			list-style: none;
+			margin-top: 0.5em;
+			padding: 0;
+		}
+		
+					#footer ul.footer-links li{
+						padding: 0.2em 0 0.2em 0;
+					}
+					
+						#footer ul.footer-links li a{
+							color: #dadbdd;
+							text-transform: none;
+						}
 
 		#footer .copyright {
-			color: #bbb;
 			font-size: 0.9em;
-			margin: 0 0 2em 0;
+			margin: 2em 0 2em 0;
 			padding: 0;
 			text-align: center;
+			color: #dadbdd;
 		}
 
 			#footer .copyright li {
-				border-left: solid 1px rgba(144, 144, 144, 0.25);
+				border-left: solid 1px rgba(255, 255, 255, 0.25);
 				display: inline-block;
 				list-style: none;
 				margin-left: 1.5em;
@@ -1596,7 +1654,7 @@
 		@media screen and (max-width: 480px) {
 			
 			.view-more {
-				margin-top: 1em;
+				margin-top: 1.2em;
 			}
 	
 			.view-more a {
@@ -1637,4 +1695,11 @@
 		
 		#pre-footer a i{
 			margin-right: 0.75em;
+		}
+		
+		@media screen and (max-width: 480px) {
+			
+			#pre-footer {
+				margin-top: 3em;
+			}
 		}
