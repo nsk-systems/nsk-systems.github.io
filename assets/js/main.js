@@ -42,6 +42,17 @@
 		window.addEventListener('load', function() {
 			$body.classList.remove('is-loading');
 		});
+		
+	//Pop up animation	
+		$('.pop').scrollex({
+			  enter: function() {
+				$(this).css('-moz-animation-name', 'pop-up');
+				$(this).css('-webkit-animation-name', 'pop-up');
+				$(this).css('-o-animation-name', 'pop-up');
+				$(this).css('-ms-animation-name', 'pop-up');
+				$(this).css('animation-name', 'pop-up');
+			  }
+			});	
 
 	// Nav.
 		var	$nav = document.querySelector('#nav'),
