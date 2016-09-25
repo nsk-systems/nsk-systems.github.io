@@ -1358,7 +1358,10 @@
 		position: relative;
 	}
 	
-		
+	.b-product {
+		min-height: 65vh;
+		background-size: contain;
+	}
 	
 		.banner:before {
 			content: '';
@@ -1368,6 +1371,10 @@
 			top: 0;
 			left: 0;
 			background: rgba(0,0,0,0.15);
+		}
+		
+		.b-product:before {
+			display: none;
 		}
 		
 		.banner .inner{
