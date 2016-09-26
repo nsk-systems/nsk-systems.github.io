@@ -31,7 +31,7 @@
 
     cursor: pointer;
 
-    color: transparent;
+    color: inherit;
     border: none;
     outline: none;
     background: transparent;
@@ -51,7 +51,7 @@
 .slick-prev:hover,
 .slick-next:hover
 {
-    color: transparent;
+    /* color: transparent; */
     outline: none;
     background: transparent;
 }
@@ -74,7 +74,7 @@
     line-height: 1;
 
     opacity: .55;
-    color: white;
+    color: inherit;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -179,7 +179,7 @@
     color: transparent;
     border: 0;
     outline: none;
-    background: #fff;
+    background: #aaa;
 	box-shadow: none;
 	border-radius: 50%;
 	opacity: .4;

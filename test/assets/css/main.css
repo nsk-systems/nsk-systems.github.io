@@ -810,7 +810,7 @@
 		border-radius: 3px;
 		border: 0;
 		outline: 0;
-		color: #ffffff !important;
+		color: #ffffff;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: bold;
