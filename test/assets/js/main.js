@@ -184,5 +184,15 @@
 				speed: 700
 			  });
 			});
+			
+		$(document).on('change', '.size_select', function() {
+			var target = $(this).data('target');
+			var show = $("option:selected", this).data('show');
+			$(target).children().addClass('hide');
+			$(show).removeClass('hide');
+		});
+		$(document).ready(function(){
+			$('.size_select').trigger('change');
+		});
 
 })(jQuery);

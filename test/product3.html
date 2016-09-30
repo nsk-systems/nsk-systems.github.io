@@ -78,7 +78,12 @@
 							</section>
 							<header class="product">
 								<h2>Uniq V</h2>
-								<p>89,900</p>
+								<div class="var_attr">
+									<p class="s1 hide">89,900</p>
+									<p class="s2 hide">189,900</p>
+									<p class="s3 hide">289,900</p>
+									<p class="s4 hide">389,900</p>
+								</div>
 								<a href="#" class="button">Заказать</a>
 							</header>
 							
@@ -87,11 +92,11 @@
 						<div class="4u -4u 6u(medium) -3u(medium) 10u(xsmall) -1u(xsmall)">
 						<h5>Выберите размер</h5>
 						<div class="select-wrapper">
-							<select id="pa_size" name="attribute_pa_size">
-								<option value="140x200" selected="selected">140 x 200 cm</option>
-								<option value="140x220">140 x 220 cm</option>
-								<option value="200x200">200 x 200 cm</option>
-								<option value="200x220">200 x 220 cm</option>
+							<select id="pa_size" name="attribute_pa_size" class="size_select" data-target=".var_attr">
+								<option value="140x200" selected="selected" data-show=".s1">140 x 200 cm</option>
+								<option value="140x220" data-show=".s2">140 x 220 cm</option>
+								<option value="200x200" data-show=".s3">200 x 200 cm</option>
+								<option value="200x220" data-show=".s4">200 x 220 cm</option>
 							</select>
 						</div>
 						</div>
@@ -113,7 +118,7 @@
 						</div>
 					</div>
 					
-					<div class="hero-block container">
+					<!-- <div class="hero-block container">
 						<section id="photos">
 							
 							<img src="images/banner1.jpg">
@@ -126,7 +131,7 @@
 							<img src="images/banner3.jpg">
 							<img src="images/banner2.jpg">
 						</section>
-					</div>
+					</div> -->
 					
 					<section id="frontpage-grid">
 						<header>
