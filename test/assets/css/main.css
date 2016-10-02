@@ -1364,6 +1364,15 @@
 		position: relative;
 	}
 	
+	.banner-generic {
+		color: rgba(43,43,43,0.6);
+		padding-top: 5em;
+		font-size: 0.8em;
+		margin-bottom: 2em;
+	}
+		
+		
+	
 	.b-product {
 		min-height: 65vh;
 		background-size: contain;
@@ -1376,7 +1385,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background: rgba(0,0,0,0.075);
+			background: rgba(0,0,0,0.1);
 		}
 		
 		.b-product:before {
@@ -1395,6 +1404,10 @@
 			padding: 0;
 			text-transform: uppercase;
 			letter-spacing: 0.3em;
+		}
+		
+		.banner-generic h2{
+			letter-spacing: 0.1em;
 		}
 
 		.banner h2+p {
@@ -1435,6 +1448,10 @@
 				
 				.small-banner {
 					min-height: 10em;
+				}
+				
+				.banner-generic {
+					padding-top: 0;
 				}
 
 		}
