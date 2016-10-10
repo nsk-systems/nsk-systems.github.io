@@ -30,7 +30,7 @@
     padding: 0;
 
     cursor: pointer;
-
+	transform: scale(0.8,1.2);
     color: inherit;
     border: none;
     outline: none;
@@ -70,9 +70,9 @@
 .slick-next:before
 {
     font-family: compliments;
-    font-size: 75px;
+    font-size: 100px;
     line-height: 1;
-
+	font-weight: 300;
     opacity: .55;
     color: inherit;
 
