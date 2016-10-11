@@ -35,10 +35,7 @@
 				}
 			}
 		});
-
-	// Disable animations/transitions until everything's loaded.
-		$body.classList.add('is-loading');
-
+		
 		window.addEventListener('load', function() {
 			$body.classList.remove('is-loading');
 		});
@@ -153,7 +150,7 @@
 				$header.removeClass('alt');
 				$banner.unscrollex();
 			});
-			skel.on('-small !small', function() {
+			skel.on('-small', function() {
 				$header.addClass('alt');
 				if (($banner.length > 0)
 				&&	($header.hasClass('alt'))
