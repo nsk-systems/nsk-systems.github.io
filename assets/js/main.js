@@ -18,7 +18,7 @@
 				event.preventDefault();
 				var form = $(this);
 				$.ajax({
-					//dataType: "jsonp",
+					dataType: "json",
 					url: "https://script.google.com/macros/s/AKfycbzP4Fpk9dyYqfKNluJ2RJHDjKxZX0KtPFd8nqfaSg5z5PjXr2oI/exec", //"https://getsimpleform.com/messages/ajax?form_api_token=6155e5a53e9a2468cc242519b0569ead",
 					data: form.serialize()
 						}).done(function(data) {
