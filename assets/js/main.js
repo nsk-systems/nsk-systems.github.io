@@ -19,6 +19,7 @@
 				var form = $(this);
 				$.ajax({
 					url: "https://script.google.com/macros/s/AKfycbzP4Fpk9dyYqfKNluJ2RJHDjKxZX0KtPFd8nqfaSg5z5PjXr2oI/exec",
+					method: "POST",
 					data: form.serialize()
 						}).done(function(data) {
 							$(".ajax-form").hide();
