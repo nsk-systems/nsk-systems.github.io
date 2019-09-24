@@ -17,16 +17,17 @@
 			$('.ajax-form').submit(function(event) {
 				event.preventDefault();
 				var form = $(this);
+				$('.ajax-form').fadeOut("400");
 				$.ajax({
 					url: "https://script.google.com/macros/s/AKfycbzsBxQ_0rkFBSPUoWywnvdjUfyippHomxBDDRHV2hpTmWIrYNc/exec",
 					dataType: "jsonp",
 					data: form.serialize()
 						}).done(function(data) {
-							$(".ajax-form").hide();
+							
 							$(".form-succes").fadeIn("400");
 							
 						}).fail(function(data) {
-							$(".ajax-form").hide();
+							
 							$(".form-error").fadeIn("400");
 						});
 			  });
